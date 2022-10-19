@@ -4,4 +4,4 @@ const init = {
     count:1,
     todos:[]
 }
-const store = createStore(reducer,init)
+export const store = createStore(reducer,init)

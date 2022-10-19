@@ -1,14 +1,5 @@
-import {INC,DEC} from "./actionTypes.js";
+import {INC,DEC,ADD} from "./actionTypes.js";
 
-const increment = ()=>{
-    return ({
-        type:INC
-        
-    })
-}
-const decrement = ()=>{
-    return ({
-        type:DEC
-        
-    })
-}
+export const increment = (payload)=>({type:INC,payload})
+export const decrement = (payload)=>({type:DEC,payload})
+export const add_todos = (payload)=>({type:ADD,payload})
