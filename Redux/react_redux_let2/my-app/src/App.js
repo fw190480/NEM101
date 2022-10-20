@@ -14,6 +14,7 @@ function App() {
 
   const {count,todos} = useSelector(state => state)
   const dispatch = useDispatch()
+  console.log(todos)
 
   return (
     <div className="App">
