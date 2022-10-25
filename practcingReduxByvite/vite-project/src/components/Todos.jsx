@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRef } from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addTodos, deleteTodos, updateTodos } from '../redux/todos/action.todos'
+import { addTodos, deleteTodos, getTodos, updateTodos } from '../redux/todos/action.todos'
 
 const Todos = () => {
     const [text,setText] = useState('');
-    const myRef = useRef()
+    
+    useEffect(()=>{
+        getTodos(dispatch(getTodos()))
+    },[])
 
     const {todos} = useSelector(store=>store.todos)
     const dispatch = useDispatch();

@@ -1,10 +1,16 @@
-import { ADD_TODOS, DELETE_TODOS, UPDATE_TODOS } from "./actionType.todos"
+import { ADD_TODOS, DELETE_TODOS, GET_TODOS, UPDATE_TODOS } from "./actionType.todos"
 
 const initS = {
     todos:[]
 }
 export const todosReducer = (state=initS,action)=>{
     switch(action.type){
+        case GET_TODOS:{
+            return{
+                ...state,
+                todos:action.payload
+            }
+        }
         case ADD_TODOS :{
             return {
                 ...state,
